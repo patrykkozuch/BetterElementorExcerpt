@@ -51,7 +51,7 @@ class Better_Post_Excerpt_Tag extends Base_Tag {
         $max_length = (int) $settings['max_length'];
         $excerpt = get_the_excerpt();
 
-        $excerpt = Utils::trim_words( $excerpt, $max_length );
+        $excerpt = Utils::trim_words( $excerpt, $max_length ) . '...';
 
         echo wp_kses_post( $excerpt );
     }
